@@ -44,7 +44,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.TXTRenderer = exports.TIFFRenderer = exports.PNGRenderer = exports.PDFRenderer = exports.MSDocRenderer = exports.JPGRenderer = exports.ImageProxyRenderer = exports.HTMLRenderer = exports.BMPRenderer = exports.DocViewerRenderers = void 0;
+exports.WEBPRenderer = exports.TXTRenderer = exports.TIFFRenderer = exports.PNGRenderer = exports.PDFRenderer = exports.MSDocRenderer = exports.JPGRenderer = exports.ImageProxyRenderer = exports.HTMLRenderer = exports.BMPRenderer = exports.DocViewerRenderers = void 0;
 var react_1 = __importDefault(require("react"));
 var styled_components_1 = __importStar(require("styled-components"));
 var HeaderBar_1 = require("./components/HeaderBar");
@@ -67,6 +67,8 @@ var tiff_1 = __importDefault(require("./plugins/tiff"));
 exports.TIFFRenderer = tiff_1.default;
 var txt_1 = __importDefault(require("./plugins/txt"));
 exports.TXTRenderer = txt_1.default;
+var webp_1 = __importDefault(require("./plugins/webp"));
+exports.WEBPRenderer = webp_1.default;
 var state_1 = require("./state");
 var theme_1 = require("./theme");
 var DocViewer = function (props) {

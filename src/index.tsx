@@ -11,6 +11,7 @@ import PDFRenderer from "./plugins/pdf";
 import PNGRenderer from "./plugins/png";
 import TIFFRenderer from "./plugins/tiff";
 import TXTRenderer from "./plugins/txt";
+import WEBPRenderer from "./plugins/webp";
 import { AppProvider } from "./state";
 import { defaultTheme } from "./theme";
 import { DocRenderer, IConfig, IDocument, ITheme } from "./types";
@@ -74,4 +75,5 @@ export {
   PNGRenderer,
   TIFFRenderer,
   TXTRenderer,
+  WEBPRenderer
 };
