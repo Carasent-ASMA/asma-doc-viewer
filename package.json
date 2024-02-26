@@ -1,6 +1,6 @@
 {
   "name": "asma-doc-viewer",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "test",
   "author": "",
   "license": "ISC",
@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "rm -rf build -p tsconfig-npm.json",
+    "build": "rm -rf build/* && tsc -p tsconfig-npm.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "version:patch": "npm run version:pre && npm run version:changelog && npm version patch && npm run version:post",
