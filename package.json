@@ -1,6 +1,6 @@
 {
   "name": "asma-doc-viewer",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "test",
   "author": "",
   "license": "ISC",
@@ -11,6 +11,7 @@
   "types": "build/index.d.ts",
   "dependencies": {
     "pdfjs-dist": "2.4.456",
+    "print-js": "^1.6.0",
     "react-pdf": "5.0.0",
     "styled-components": "^5.3.5"
   },
@@ -29,11 +30,11 @@
     "react": "^18.0.14",
     "react-dom": "^18.0.14",
     "react-scripts": "5.0.1",
-    "typescript": "^4.7.4"
+    "typescript": "^5.1.6"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "del -rf build & tsc -p tsconfig-npm.json",
+    "build": "rm -rf build -p tsconfig-npm.json",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "version:patch": "npm run version:pre && npm run version:changelog && npm version patch && npm run version:post",

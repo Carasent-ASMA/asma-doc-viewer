@@ -22,6 +22,7 @@ export interface DocViewerProps {
   config?: IConfig;
   theme?: ITheme;
   pluginRenderers?: DocRenderer[];
+  children?: React.ReactNode;
 }
 
 const DocViewer: FC<DocViewerProps> = (props) => {

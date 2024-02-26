@@ -1,4 +1,4 @@
-import React, { createContext, Dispatch, FC, useReducer } from "react";
+import React, {createContext, Dispatch, FC, ReactNode, useReducer} from "react";
 import { IMainState } from "../../../state/reducer";
 import { PDFActions } from "./actions";
 import {
@@ -13,7 +13,7 @@ const PDFContext = createContext<{
   dispatch: Dispatch<PDFActions>;
 }>({ state: initialPDFState, dispatch: () => null });
 
-const PDFProvider: FC<{ mainState: IMainState }> = ({
+const PDFProvider: FC<{ mainState: IMainState, children: ReactNode }> = ({
   children,
   mainState,
 }) => {

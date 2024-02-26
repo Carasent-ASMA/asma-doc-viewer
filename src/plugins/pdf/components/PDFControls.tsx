@@ -7,12 +7,14 @@ import { setPDFPaginated, setZoomLevel } from "../state/actions";
 import { initialPDFState } from "../state/reducer";
 import {
   DownloadPDFIcon,
+  PrintPDFIcon,
   ResetZoomPDFIcon,
   TogglePaginationPDFIcon,
   ZoomInPDFIcon,
   ZoomOutPDFIcon,
 } from "./icons";
 import PDFPagination from "./PDFPagination";
+import printJS from "print-js";
 
 const PDFControls: FC<{}> = () => {
   const {
@@ -21,6 +23,16 @@ const PDFControls: FC<{}> = () => {
   } = useContext(PDFContext);
 
   const currentDocument = mainState?.currentDocument || null;
+
+  const handlePrint = () => {
+    const print_base64 = currentDocument?.fileData?.toString().slice(currentDocument?.fileData?.toString().indexOf(',') + 1);
+
+    printJS({
+      printable: print_base64,
+      type: 'pdf',
+      base64: true,
+    });
+  };
 
   return (
     <Container id="pdf-controls">
@@ -35,6 +47,9 @@ const PDFControls: FC<{}> = () => {
           <DownloadPDFIcon color="#000" size="75%" />
         </DownloadButton>
       )}
+      <ControlButton id="pdf-print" onClick={handlePrint}>
+        <PrintPDFIcon color="#000" size="65%" />
+      </ControlButton>
 
       <ControlButton
         id="pdf-zoom-out"

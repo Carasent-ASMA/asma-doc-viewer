@@ -43,6 +43,8 @@ export interface IDocument {
 
 export interface DocRendererProps {
     mainState: IMainState;
+    children?: ReactElement<any, any> | null;
+
 }
 
 export interface DocRenderer extends FC<DocRendererProps> {
