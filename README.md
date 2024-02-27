@@ -28,7 +28,7 @@
 ## Current Renderable File Types
 
 | Extension | MIME Type                                                                          | Available |
-| --------- | ---------------------------------------------------------------------------------- | --------- |
+|-----------| ---------------------------------------------------------------------------------- | --------- |
 | bmp       | image/bmp                                                                          | `✓`       |
 | doc       | application/msword                                                                 | `✓`       |
 | docx      | application/vnd.openxmlformats-officedocument.wordprocessingml.document            | `✓`       |
@@ -44,6 +44,7 @@
 | txt       | text/plain                                                                         | `✓`       |
 | xls       | application/vnd.ms-excel                                                           | `✓`       |
 | xlsx      | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet                  | `✓`       |
+| webp      | application/vnd.openxmlformats-officedocument.spreadsheetml.sheet                  | `✓`       |
 
 <br />
 <br />

@@ -10,49 +10,18 @@ var __assign = (this && this.__assign) || function () {
     };
     return __assign.apply(this, arguments);
 };
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var react_1 = __importStar(require("react"));
+var react_1 = __importDefault(require("react"));
 var image_1 = __importDefault(require("../image"));
 var WEBPRenderer = function (props) {
-    var _a;
-    var _b = (0, react_1.useState)(), imageUrl = _b[0], setImageUrl = _b[1];
-    var webpBuffer = (_a = props.mainState.currentDocument) === null || _a === void 0 ? void 0 : _a.fileData;
-    (0, react_1.useEffect)(function () {
-        if (webpBuffer) {
-            var blob = new Blob([webpBuffer], { type: 'image/webp' });
-            var url = URL.createObjectURL(blob);
-            setImageUrl(url);
-        }
-    }, [webpBuffer]);
+    var _a, _b, _c, _d;
     return (react_1.default.createElement(image_1.default, __assign({}, props),
         react_1.default.createElement("picture", null,
-            react_1.default.createElement("source", { srcSet: imageUrl }))));
+            react_1.default.createElement("source", { srcSet: (_a = props.mainState.currentDocument) === null || _a === void 0 ? void 0 : _a.uri }),
+            react_1.default.createElement("img", { src: (_b = props.mainState.currentDocument) === null || _b === void 0 ? void 0 : _b.uri, alt: (_d = (_c = props.mainState.currentDocument) === null || _c === void 0 ? void 0 : _c.fileName) !== null && _d !== void 0 ? _d : 'No title' }))));
 };
 WEBPRenderer.fileTypes = ["webp", "image/webp"];
 WEBPRenderer.weight = 0;
