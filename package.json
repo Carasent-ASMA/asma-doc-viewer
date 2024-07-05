@@ -1,66 +1,66 @@
 {
-  "name": "asma-doc-viewer",
-  "version": "1.0.10",
-  "description": "Document viewer",
-  "author": "",
-  "license": "ISC",
-  "repository": {
-    "url": ""
-  },
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
-  "dependencies": {
-    "pdfjs-dist": "2.4.456",
-    "print-js": "^1.6.0",
-    "react-pdf": "5.0.0",
-    "styled-components": "^5.3.5"
-  },
-  "devDependencies": {
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^14.2.1",
-    "@types/jest": "^28.1.2",
-    "@types/node": "^18.0.0",
-    "@types/pdfjs-dist": "^2.10.378",
-    "@types/react": "^18.0.14",
-    "@types/react-dom": "^17.0.2",
-    "@types/react-pdf": "4.0.5",
-    "@types/styled-components": "^5.1.25",
-    "generate-changelog": "^1.8.0",
-    "react": "^18.0.14",
-    "react-dom": "^18.0.14",
-    "react-scripts": "5.0.1",
-    "typescript": "^5.1.6"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "rm -rf build/* && tsc -p tsconfig-npm.json",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "version:patch": "pnpm run version:pre && pnpm run version:changelog && pnpm version patch && pnpm run version:post",
-    "version:minor": "pnpm run version:pre && pnpm run version:changelog && pnpm version minor && pnpm run version:post",
-    "version:major": "pnpm run version:pre && pnpm run version:changelog && pnpm version major && pnpm run version:post",
-    "version:pre": "if [ $(git rev-parse --abbrev-ref HEAD) != 'master' ]; then echo \"\\033[1m\\033[31mCurrently on $(git rev-parse --abbrev-ref HEAD) branch. Please checkout master.\\033[0m\"; exit 1; else exit 0; fi",
-    "version:changelog": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
-    "version:post": "git push origin master && git push origin master --tags",
-    "build-release:patch": "react-scripts test --watchAll=false && pnpm run build && pnpm run version:patch",
-    "build-release:minor": "react-scripts test --watchAll=false && pnpm run build && pnpm run version:minor",
-    "build-release:major": "react-scripts test --watchAll=false && pnpm run build && pnpm run version:major",
-    "preinstall": "npx only-allow pnpm"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "asma-doc-viewer",
+    "version": "1.0.15",
+    "description": "Document viewer",
+    "author": "",
+    "license": "ISC",
+    "repository": {
+        "url": ""
+    },
+    "main": "build/index.js",
+    "types": "build/index.d.ts",
+    "dependencies": {
+        "pdfjs-dist": "2.4.456",
+        "print-js": "^1.6.0",
+        "react-pdf": "5.0.0",
+        "styled-components": "^5.3.5"
+    },
+    "devDependencies": {
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^14.2.1",
+        "@types/jest": "^28.1.2",
+        "@types/node": "^18.0.0",
+        "@types/pdfjs-dist": "^2.10.378",
+        "@types/react": "^18.0.14",
+        "@types/react-dom": "^17.0.2",
+        "@types/react-pdf": "4.0.5",
+        "@types/styled-components": "^5.1.25",
+        "generate-changelog": "^1.8.0",
+        "react": "^18.0.14",
+        "react-dom": "^18.0.14",
+        "react-scripts": "5.0.1",
+        "typescript": "^5.1.6"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "rm -rf build/* && tsc -p tsconfig-npm.json",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "version:patch": "pnpm run version:pre && pnpm run version:changelog && pnpm version patch && pnpm run version:post",
+        "version:minor": "pnpm run version:pre && pnpm run version:changelog && pnpm version minor && pnpm run version:post",
+        "version:major": "pnpm run version:pre && pnpm run version:changelog && pnpm version major && pnpm run version:post",
+        "version:pre": "if [ $(git rev-parse --abbrev-ref HEAD) != 'master' ]; then echo \"\\033[1m\\033[31mCurrently on $(git rev-parse --abbrev-ref HEAD) branch. Please checkout master.\\033[0m\"; exit 1; else exit 0; fi",
+        "version:changelog": "changelog -p && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md'",
+        "version:post": "git push origin master && git push origin master --tags",
+        "build-release:patch": "react-scripts test --watchAll=false && pnpm run build && pnpm run version:patch",
+        "build-release:minor": "react-scripts test --watchAll=false && pnpm run build && pnpm run version:minor",
+        "build-release:major": "react-scripts test --watchAll=false && pnpm run build && pnpm run version:major",
+        "preinstall": "npx only-allow pnpm"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
 }
