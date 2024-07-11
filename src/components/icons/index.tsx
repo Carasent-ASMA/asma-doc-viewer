@@ -1,8 +1,8 @@
-import React from "react";
+"use client";
 
 export interface IIconProps {
   color?: string;
-  size?: string | number | (string & {}) | undefined;
+  size?: string | number | string | undefined;
   reverse?: boolean;
 }
 
@@ -14,8 +14,7 @@ export const NextDocIcon = (props: IIconProps) => {
   return <DocNavIcon {...props} reverse />;
 };
 
-const DocNavIcon = (props: IIconProps) => {
-  const { color, size, reverse } = props;
+const DocNavIcon = ({ color, size, reverse }: IIconProps) => {
   return (
     <svg
       width={size || "100%"}

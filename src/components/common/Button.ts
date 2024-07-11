@@ -1,5 +1,5 @@
+import type { IStyledProps } from "src/models";
 import styled, { css } from "styled-components";
-import { IStyledProps } from "../../types";
 
 interface ButtonProps extends IStyledProps {
   disabled?: boolean;
@@ -7,11 +7,12 @@ interface ButtonProps extends IStyledProps {
 
 export const ButtonPrimaryStyle = css`
   background-color: ${(props: IStyledProps) => props.theme.primary};
-  color: ${(props: IStyledProps) => props.theme.text_primary};
+  color: ${(props: IStyledProps) => props.theme.textPrimary};
 `;
+
 export const ButtonSecondaryStyle = css`
   background-color: ${(props: IStyledProps) => props.theme.secondary};
-  color: ${(props: IStyledProps) => props.theme.text_secondary};
+  color: ${(props: IStyledProps) => props.theme.textSecondary};
 `;
 
 export const Button = styled.button<ButtonProps>`
@@ -51,7 +52,7 @@ export const LinkButton = styled.a`
   text-decoration: none;
   border-radius: 35px;
   background-color: ${(props: IStyledProps) => props.theme.primary};
-  color: ${(props: IStyledProps) => props.theme.text_primary};
+  color: ${(props: IStyledProps) => props.theme.textPrimary};
   box-shadow: 2px 2px 3px #00000033;
 
   width: 35px;
