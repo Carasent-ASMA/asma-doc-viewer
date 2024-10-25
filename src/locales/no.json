@@ -1,0 +1,10 @@
+{
+    "documentNavInfo": "Dokument {{ currentFileNo }} av {{ allFilesCount }}",
+    "noRendererMessage": "Ingen rendering for filtype: {{{ fileType }}}",
+    "downloadButtonLabel": "Last ned fil",
+    "brokenFile": "Filen din er ødelagt. Vennligst sjekk den på maskinen din.",
+    "msgPluginRecipients": "Mottakere",
+    "msgPluginSender": "Avsender",
+    "pdfPluginLoading": "Lasting...",
+    "pdfPluginPageNumber": "Side {{ currentPage }}/{{ allPagesCount }}"
+}

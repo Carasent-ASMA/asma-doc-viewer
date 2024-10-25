@@ -54,7 +54,7 @@ export const Default = () => (
             },
             pdfVerticalScrollByDefault: true,
         }}
-        language='pl'
+        language='no'
     />
 )
 
