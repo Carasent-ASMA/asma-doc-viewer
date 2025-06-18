@@ -5,8 +5,16 @@ import type { IStyledProps } from '../../..'
 import { PDFContext } from '../state'
 import { setPDFPaginated, setZoomLevel } from '../state/actions'
 import { useTranslation } from '../../../hooks/useTranslation'
-import { DownloadPDFIcon, ResetZoomPDFIcon, TogglePaginationPDFIcon, ZoomInPDFIcon, ZoomOutPDFIcon } from './icons'
+import {
+    DownloadPDFIcon,
+    PrintPDFIcon,
+    ResetZoomPDFIcon,
+    TogglePaginationPDFIcon,
+    ZoomInPDFIcon,
+    ZoomOutPDFIcon,
+} from './icons'
 import PDFPagination from './PDFPagination'
+import printJS from 'node_modules/print-js/src' 
 
 const PDFControls: FC = () => {
     const { t } = useTranslation()
@@ -16,6 +24,18 @@ const PDFControls: FC = () => {
     } = useContext(PDFContext)
 
     const currentDocument = mainState?.currentDocument || null
+
+    const handlePrint = () => {
+        const print_base64 = currentDocument?.fileData
+            ?.toString()
+            .slice(currentDocument?.fileData?.toString().indexOf(',') + 1)
+
+        printJS({
+            printable: print_base64,
+            type: 'pdf',
+            base64: true,
+        })
+    }
 
     return (
         <Container id='pdf-controls'>
@@ -31,7 +51,9 @@ const PDFControls: FC = () => {
                     <DownloadPDFIcon color='#000' size='75%' />
                 </DownloadButton>
             )}
-
+            <ControlButton id='pdf-print' onClick={handlePrint}>
+                <PrintPDFIcon color='#000' size='65%' />
+            </ControlButton>
             <ControlButton id='pdf-zoom-out' onMouseDown={() => dispatch(setZoomLevel(zoomLevel - zoomJump))}>
                 <ZoomOutPDFIcon color='#000' size='80%' />
             </ControlButton>

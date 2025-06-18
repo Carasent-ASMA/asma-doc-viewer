@@ -1,6 +1,6 @@
 {
     "name": "asma-doc-viewer",
-    "version": "1.0.22",
+    "version": "1.0.24",
     "publishConfig": {
         "access": "public"
     },
@@ -51,6 +51,7 @@
         "mustache": "^4.2.0",
         "node": "18.17.0",
         "papaparse": "^5.4.1",
+        "print-js": "1.6.0",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
         "react-pdf": "^9.1.0",
