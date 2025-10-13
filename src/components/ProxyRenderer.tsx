@@ -1,7 +1,7 @@
 'use client'
 
 import { type FC, useCallback } from 'react'
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { setRendererRect } from '../store/actions'
 import type { DocRenderer, IConfig, IDocument, IStyledProps } from '../models'
 import { getFileName } from '../utils/getFileName'
@@ -9,7 +9,7 @@ import { useDocumentLoader } from '../hooks/useDocumentLoader'
 import { useWindowSize } from '../hooks/useWindowSize'
 import { LinkButton } from './common'
 import { LoadingIcon } from './icons'
-import { LoadingTimeout } from './LoadingTimout'
+import { LoadingContainer, LoadingIconContainer, LoadingTimeout } from './LoadingTimeout'
 import { useTranslation } from '../hooks/useTranslation'
 import type { IMainState } from '../store/mainStateReducer'
 
@@ -128,30 +128,6 @@ export const ProxyRenderer: FC = () => {
         </div>
     )
 }
-
-const LoadingContainer = styled.div`
-    display: flex;
-    flex: 1;
-    height: 75px;
-    align-items: center;
-    justify-content: center;
-`
-
-const spinAnim = keyframes`
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-`
-
-const LoadingIconContainer = styled.div`
-    animation-name: ${spinAnim};
-    animation-duration: 4s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-`
 
 const DownloadButton = styled(LinkButton)`
     width: 130px;

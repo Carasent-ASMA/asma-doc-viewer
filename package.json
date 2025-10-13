@@ -1,6 +1,6 @@
 {
     "name": "asma-doc-viewer",
-    "version": "1.0.24",
+    "version": "1.0.25",
     "publishConfig": {
         "access": "public"
     },
@@ -48,6 +48,7 @@
         "@mui/material": "^5.13.7",
         "ajv": "^7.2.4",
         "core-js": "^3.37.1",
+        "heic2any": "^0.0.4",
         "mustache": "^4.2.0",
         "node": "18.17.0",
         "papaparse": "^5.4.1",
