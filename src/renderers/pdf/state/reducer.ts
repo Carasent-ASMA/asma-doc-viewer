@@ -12,56 +12,52 @@ import {
 } from './actions'
 
 export type IPDFState = {
-  defaultZoomLevel: number;
-  zoomLevel: number;
-  zoomJump: number;
-  paginated: boolean;
-  numPages: number;
-  currentPage: number;
-  mainState?: IMainState;
-};
+    defaultZoomLevel: number
+    zoomLevel: number
+    zoomJump: number
+    paginated: boolean
+    numPages: number
+    currentPage: number
+    disablePageTags: boolean
+    mainState?: IMainState
+}
 
 export const initialPDFState: IPDFState = {
-  defaultZoomLevel: 1,
-  zoomLevel: 1,
-  zoomJump: 0.1,
-  paginated: true,
-  numPages: 0,
-  currentPage: 1,
-};
+    defaultZoomLevel: 1,
+    zoomLevel: 1,
+    zoomJump: 0.1,
+    paginated: true,
+    numPages: 0,
+    currentPage: 1,
+    disablePageTags: false,
+}
 
-export type PDFStateReducer = (
-  state: IPDFState,
-  action: PDFStateActions,
-) => IPDFState;
+export type PDFStateReducer = (state: IPDFState, action: PDFStateActions) => IPDFState
 
-export const reducer: PDFStateReducer = (
-  state = initialPDFState,
-  action: PDFStateActions,
-): IPDFState => {
-  switch (action.type) {
-    case SET_ZOOM_LEVEL: {
-      const { value } = action as SetZoomLevel;
+export const reducer: PDFStateReducer = (state = initialPDFState, action: PDFStateActions): IPDFState => {
+    switch (action.type) {
+        case SET_ZOOM_LEVEL: {
+            const { value } = action as SetZoomLevel
 
-      return { ...state, zoomLevel: value };
+            return { ...state, zoomLevel: value }
+        }
+
+        case SET_PDF_PAGINATED: {
+            const { value } = action as SetPDFPaginated
+            return { ...state, paginated: value }
+        }
+
+        case SET_NUM_PAGES: {
+            const { value } = action as SetNumPages
+            return { ...state, numPages: value }
+        }
+
+        case SET_CURRENT_PAGE: {
+            const { value } = action as SetCurrentPage
+            return { ...state, currentPage: value }
+        }
+
+        default:
+            return state
     }
-
-    case SET_PDF_PAGINATED: {
-      const { value } = action as SetPDFPaginated;
-      return { ...state, paginated: value };
-    }
-
-    case SET_NUM_PAGES: {
-      const { value } = action as SetNumPages;
-      return { ...state, numPages: value };
-    }
-
-    case SET_CURRENT_PAGE: {
-      const { value } = action as SetCurrentPage;
-      return { ...state, currentPage: value };
-    }
-
-    default:
-      return state;
-  }
-};
+}

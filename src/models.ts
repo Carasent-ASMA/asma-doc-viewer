@@ -1,6 +1,6 @@
 import type { FC, ReactElement, ComponentType, PropsWithChildren } from 'react'
-import type  { IMainState } from './store/mainStateReducer'
-import type  { FileLoaderFunction } from './utils/fileLoaders'
+import type { IMainState } from './store/mainStateReducer'
+import type { FileLoaderFunction } from './utils/fileLoaders'
 
 export interface IConfig {
     header?: IHeaderConfig
@@ -9,6 +9,7 @@ export interface IConfig {
     csvDelimiter?: string
     pdfZoom?: IPdfZoomConfig
     pdfVerticalScrollByDefault?: boolean
+    disablePageTags?: boolean
 }
 
 export interface ILoadingRendererConfig {

@@ -1,6 +1,6 @@
 {
     "name": "asma-doc-viewer",
-    "version": "1.0.25",
+    "version": "1.0.27",
     "publishConfig": {
         "access": "public"
     },
