@@ -39,6 +39,8 @@ const DocumentPDF = styled(Document)`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    overflow-x: auto;
+    width: 100%;
 `
 
 export default PDFPages
