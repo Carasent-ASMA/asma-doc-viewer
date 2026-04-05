@@ -8,6 +8,10 @@
     "files": [
         "dist/**/*"
     ],
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:Carasent-ASMA/asma-doc-viewer.git"
+    },
     "keywords": [],
     "author": "asma-team",
     "types": "./dist/index.d.ts",
