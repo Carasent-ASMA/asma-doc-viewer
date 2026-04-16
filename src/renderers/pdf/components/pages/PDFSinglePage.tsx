@@ -11,13 +11,13 @@ interface Props {
 
 const PDFSinglePage: FC<Props> = ({ pageNum }) => {
     const {
-        state: { mainState, paginated, zoomLevel, numPages, currentPage, disablePageTags },
+        state: { paginated, zoomLevel, numPages, currentPage, disablePageTags, containerWidth },
     } = useContext(PDFContext)
     const { t } = useTranslation()
 
-    const rendererRect = mainState?.rendererRect || null
-
     const _pageNum = pageNum ?? currentPage
+
+    const pageWidth = containerWidth > 0 ? containerWidth * zoomLevel : undefined
 
     return (
         <PageWrapper id='pdf-page-wrapper' $lastPage={_pageNum >= numPages}>
@@ -29,13 +29,7 @@ const PDFSinglePage: FC<Props> = ({ pageNum }) => {
                     })}
                 </PageTag>
             )}
-            <Page
-                pageNumber={_pageNum || currentPage}
-                scale={zoomLevel}
-                height={(rendererRect?.height ?? 100) - 100}
-                width={(rendererRect?.width ?? 100) - 100}
-                loading={t('pdfPluginLoading')}
-            />
+            <Page pageNumber={_pageNum || currentPage} width={pageWidth} loading={null} />
         </PageWrapper>
     )
 }

@@ -1,10 +1,12 @@
 import { type IMainState } from '../../../store/mainStateReducer'
 import {
     type PDFActions as PDFStateActions,
+    type SetContainerWidth,
     type SetCurrentPage,
     type SetNumPages,
     type SetPDFPaginated,
     type SetZoomLevel,
+    SET_CONTAINER_WIDTH,
     SET_CURRENT_PAGE,
     SET_NUM_PAGES,
     SET_PDF_PAGINATED,
@@ -18,6 +20,7 @@ export type IPDFState = {
     paginated: boolean
     numPages: number
     currentPage: number
+    containerWidth: number
     disablePageTags: boolean
     mainState?: IMainState
 }
@@ -29,6 +32,7 @@ export const initialPDFState: IPDFState = {
     paginated: true,
     numPages: 0,
     currentPage: 1,
+    containerWidth: 0,
     disablePageTags: false,
 }
 
@@ -55,6 +59,11 @@ export const reducer: PDFStateReducer = (state = initialPDFState, action: PDFSta
         case SET_CURRENT_PAGE: {
             const { value } = action as SetCurrentPage
             return { ...state, currentPage: value }
+        }
+
+        case SET_CONTAINER_WIDTH: {
+            const { value } = action as SetContainerWidth
+            return { ...state, containerWidth: value }
         }
 
         default:
