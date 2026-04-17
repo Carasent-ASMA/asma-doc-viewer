@@ -45,8 +45,16 @@ export const setCurrentPage = (value: number): SetCurrentPage => ({
   value,
 });
 
-export type PDFActions =
-  | SetZoomLevel
-  | SetPDFPaginated
-  | SetNumPages
-  | SetCurrentPage;
+export const SET_CONTAINER_WIDTH: string = 'SET_CONTAINER_WIDTH'
+
+export interface SetContainerWidth {
+    type: typeof SET_CONTAINER_WIDTH
+    value: number
+}
+
+export const setContainerWidth = (value: number): SetContainerWidth => ({
+    type: SET_CONTAINER_WIDTH,
+    value,
+})
+
+export type PDFActions = SetZoomLevel | SetPDFPaginated | SetNumPages | SetCurrentPage | SetContainerWidth
