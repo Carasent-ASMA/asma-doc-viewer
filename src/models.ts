@@ -10,6 +10,8 @@ export interface IConfig {
     pdfZoom?: IPdfZoomConfig
     pdfVerticalScrollByDefault?: boolean
     disablePageTags?: boolean
+    /** Target for external links in PDFs. Defaults to '_self' */
+    externalLinkTarget?: '_self' | '_blank' | '_parent' | '_top'
 }
 
 export interface ILoadingRendererConfig {

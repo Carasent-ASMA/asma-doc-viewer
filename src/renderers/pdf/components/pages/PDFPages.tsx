@@ -53,6 +53,7 @@ const PDFPages: FC<{}> = () => {
             file={currentDocument.fileData}
             onLoadSuccess={({ numPages }) => dispatch(setNumPages(numPages))}
             loading={<span>{t('pdfPluginLoading')}</span>}
+            externalLinkTarget={mainState?.config?.externalLinkTarget ?? '_blank'}
         >
             {paginated ? <PDFSinglePage /> : <PDFAllPages />}
         </DocumentPDF>
