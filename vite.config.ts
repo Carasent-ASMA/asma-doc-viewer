@@ -7,6 +7,12 @@ import terser from '@rollup/plugin-terser'
 import cssInjectedByJsPlugin from 'vite-plugin-css-injected-by-js'
 import * as packageJson from './package.json'
 
+// Keep React and React DOM (including their subpath imports) external
+// so the consuming app provides a single runtime compatible with 18/19.
+// This avoids bundling local React internals like react/jsx-runtime.
+const peerDependencies = Object.keys(packageJson.peerDependencies)
+const externalPackages = [...peerDependencies, ...Object.keys(packageJson.devDependencies)]
+
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
@@ -29,7 +35,7 @@ export default defineConfig({
             fileName: (format) => `asmaDocViewer.${format}.js`,
         },
         rollupOptions: {
-            external: [...Object.keys(packageJson.peerDependencies), ...Object.keys(packageJson.devDependencies)],
+            external: (id) => externalPackages.includes(id) || id.startsWith('react/') || id.startsWith('react-dom/'),
             output: {
                 globals: {
                     react: 'React',
