@@ -65,6 +65,7 @@ const DocumentPDF = styled(Document)`
     flex-direction: column;
     margin: 0 auto;
     overflow-x: auto;
+    overflow-y: hidden;
     width: 100%;
 `
 
