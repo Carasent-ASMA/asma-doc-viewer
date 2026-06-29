@@ -4,6 +4,10 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@types/node': 18.0.3
+  node: 18.17.0
+
 importers:
 
   .:
@@ -128,7 +132,7 @@ importers:
         version: 4.0.0(vite@4.3.9(@types/node@18.0.3)(less@4.1.3)(sass@1.77.5)(stylus@0.59.0)(terser@5.31.2))
       asma-core-ui:
         specifier: 3.1.0-3
-        version: 3.1.0-3(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@mui/material@5.13.7(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@types/react@18.0.37)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@4.3.9(@types/node@18.0.3)(less@4.1.3)(sass@1.77.5)(stylus@0.59.0)(terser@5.31.2))
+        version: 3.1.0-3(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@mui/material@5.13.7(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@types/react@18.0.37)(csstype@3.1.3)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@4.3.9(@types/node@18.0.3)(less@4.1.3)(sass@1.77.5)(stylus@0.59.0)(terser@5.31.2))
       autoprefixer:
         specifier: ^10.4.14
         version: 10.4.14(postcss@8.4.24)
@@ -2719,7 +2723,7 @@ packages:
   '@rushstack/node-core-library@3.59.5':
     resolution: {integrity: sha512-1IpV7LufrI1EoVO8hYsb3t6L8L+yp40Sa0OaOV2CIu1zx4e6ZeVNaVIEXFgMXBKdGXkAh21MnCaIzlDNpG6ZQw==}
     peerDependencies:
-      '@types/node': '*'
+      '@types/node': 18.0.3
     peerDependenciesMeta:
       '@types/node':
         optional: true
@@ -6556,7 +6560,7 @@ packages:
     resolution: {integrity: sha512-uXbpfeQ7R6TZBqI3/TxCU4q4ttk3u0PJeC+E0zbfSoSjq6bJ7buBPxzQPL0ifrkY4DNu4JUdk0ImlBUYi840eQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
-      '@types/node': '*'
+      '@types/node': 18.0.3
       ts-node: '>=9.0.0'
     peerDependenciesMeta:
       '@types/node':
@@ -9840,7 +9844,7 @@ packages:
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
     peerDependencies:
-      '@types/node': '>= 14'
+      '@types/node': 18.0.3
       less: '*'
       sass: '*'
       stylus: '*'
@@ -15249,7 +15253,7 @@ snapshots:
 
   asap@2.0.6: {}
 
-  asma-core-ui@3.1.0-3(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@mui/material@5.13.7(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@types/react@18.0.37)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@4.3.9(@types/node@18.0.3)(less@4.1.3)(sass@1.77.5)(stylus@0.59.0)(terser@5.31.2)):
+  asma-core-ui@3.1.0-3(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@mui/material@5.13.7(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@types/react@18.0.37)(csstype@3.1.3)(immer@9.0.21)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(vite@4.3.9(@types/node@18.0.3)(less@4.1.3)(sass@1.77.5)(stylus@0.59.0)(terser@5.31.2)):
     dependencies:
       '@emotion/react': 11.11.1(@types/react@18.0.37)(react@18.2.0)
       '@emotion/styled': 11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0)
@@ -15264,7 +15268,7 @@ snapshots:
       lodash-es: 4.17.21
       material-ui-popup-state: 5.0.10(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@emotion/styled@11.11.0(@emotion/react@11.11.1(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react@18.2.0))(@types/react@18.0.37)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       node: 18.17.0
-      notistack: 3.0.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      notistack: 3.0.1(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react: 18.2.0
       react-day-picker: 8.8.2(date-fns@2.30.0)(react@18.2.0)
       react-dom: 18.2.0(react@18.2.0)
@@ -15273,6 +15277,7 @@ snapshots:
       vite-plugin-css-injected-by-js: 3.5.1(vite@4.3.9(@types/node@18.0.3)(less@4.1.3)(sass@1.77.5)(stylus@0.59.0)(terser@5.31.2))
     transitivePeerDependencies:
       - '@types/react'
+      - csstype
       - vite
 
   assert@2.1.0:
@@ -19772,13 +19777,14 @@ snapshots:
 
   normalize-url@6.1.0: {}
 
-  notistack@3.0.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  notistack@3.0.1(csstype@3.1.3)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       clsx: 1.2.1
-      csstype: 3.1.3
       goober: 2.1.14(csstype@3.1.3)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - csstype
 
   npm-run-path@4.0.1:
     dependencies:
