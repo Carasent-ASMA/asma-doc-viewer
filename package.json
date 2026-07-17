@@ -55,7 +55,6 @@
         "core-js": "^3.37.1",
         "heic2any": "^0.0.4",
         "mustache": "^4.2.0",
-        "node": "18.17.0",
         "papaparse": "^5.4.1",
         "print-js": "1.6.0",
         "react": "^18.2.0",
@@ -119,7 +118,6 @@
         "react-dom": "^18.* || ^19.*"
     },
     "resolutions": {
-        "@types/node": "18.0.3",
-        "node": "18.17.0"
+        "@types/node": "18.0.3"
     }
 }
