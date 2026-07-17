@@ -6,7 +6,6 @@ settings:
 
 overrides:
   '@types/node': 18.0.3
-  node: 18.17.0
 
 importers:
 
@@ -36,9 +35,6 @@ importers:
       mustache:
         specifier: ^4.2.0
         version: 4.2.0
-      node:
-        specifier: 18.17.0
-        version: 18.17.0
       papaparse:
         specifier: ^5.4.1
         version: 5.4.1
