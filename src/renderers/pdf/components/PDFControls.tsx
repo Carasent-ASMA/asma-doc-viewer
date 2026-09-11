@@ -1,5 +1,5 @@
 import React, { type FC, useContext } from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Button, LinkButton } from '../../../components/common'
 import type { IStyledProps } from '../../..'
 import { PDFContext } from '../state'
@@ -14,7 +14,7 @@ import {
     ZoomOutPDFIcon,
 } from './icons'
 import PDFPagination from './PDFPagination'
-import printJS from 'node_modules/print-js/src' 
+import printJS from 'print-js/src'
 
 const PDFControls: FC = () => {
     const { t } = useTranslation()
@@ -26,9 +26,8 @@ const PDFControls: FC = () => {
     const currentDocument = mainState?.currentDocument || null
 
     const handlePrint = () => {
-        const print_base64 = currentDocument?.fileData
-            ?.toString()
-            .slice(currentDocument?.fileData?.toString().indexOf(',') + 1)
+        const fileData = currentDocument?.fileData?.toString()
+        const print_base64 = fileData?.slice(fileData.indexOf(',') + 1)
 
         printJS({
             printable: print_base64,
@@ -97,7 +96,7 @@ const Container = styled.div`
     }
 `
 
-const ControlButton = styled(Button)`
+const controlButtonSize = css`
     width: 30px;
     height: 30px;
     @media (max-width: 768px) {
@@ -106,11 +105,10 @@ const ControlButton = styled(Button)`
     }
 `
 
+const ControlButton = styled(Button)`
+    ${controlButtonSize}
+`
+
 const DownloadButton = styled(LinkButton)`
-    width: 30px;
-    height: 30px;
-    @media (max-width: 768px) {
-        width: 25px;
-        height: 25px;
-    }
+    ${controlButtonSize}
 `
