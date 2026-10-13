@@ -18,6 +18,8 @@ const PDFNavArrow = (props: IIconProps) => {
       style={{ transform: `${reverse ? "rotate(180deg)" : ""}` }}
       viewBox="0 0 12 12"
       version="1.1"
+      aria-hidden="true"
+      focusable="false"
     >
       <g
         id="Icons"
@@ -63,6 +65,8 @@ export const DownloadPDFIcon = (props: IIconProps) => {
       style={{ transform: `${reverse ? "rotate(180deg)" : ""}` }}
       id="Layer_1"
       viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
     >
       <path
         d="M20.57,9.43A8,8,0,0,0,5.26,10,5,5,0,1,0,5,20h5V18H5a3,3,0,0,1,0-6,3.1,3.1,0,0,1,.79.12l1.12.31.14-1.15a6,6,0,0,1,11.74-.82l.15.54.54.16A3.46,3.46,0,0,1,22,14.5,3.5,3.5,0,0,1,18.5,18H16v2h2.5A5.48,5.48,0,0,0,20.57,9.43Z"
@@ -92,6 +96,8 @@ const ZoomPDFIcon = (props: IIconProps) => {
       height={size || "100%"}
       viewBox="0 0 32 32"
       version="1.1"
+      aria-hidden="true"
+      focusable="false"
     >
       <g
         id="Page-1"
@@ -118,7 +124,13 @@ const ZoomPDFIcon = (props: IIconProps) => {
 export const ResetZoomPDFIcon = (props: IIconProps) => {
   const { color, size } = props;
   return (
-    <svg width={size || "100%"} height={size || "100%"} viewBox="0 0 24 24">
+    <svg
+      width={size || "100%"}
+      height={size || "100%"}
+      viewBox="0 0 24 24"
+      aria-hidden="true"
+      focusable="false"
+    >
       <path
         fill={color || "#aaa"}
         d="M9.29,13.29,4,18.59V17a1,1,0,0,0-2,0v4a1,1,0,0,0,.08.38,1,1,0,0,0,.54.54A1,1,0,0,0,3,22H7a1,1,0,0,0,0-2H5.41l5.3-5.29a1,1,0,0,0-1.42-1.42ZM5.41,4H7A1,1,0,0,0,7,2H3a1,1,0,0,0-.38.08,1,1,0,0,0-.54.54A1,1,0,0,0,2,3V7A1,1,0,0,0,4,7V5.41l5.29,5.3a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42ZM21,16a1,1,0,0,0-1,1v1.59l-5.29-5.3a1,1,0,0,0-1.42,1.42L18.59,20H17a1,1,0,0,0,0,2h4a1,1,0,0,0,.38-.08,1,1,0,0,0,.54-.54A1,1,0,0,0,22,21V17A1,1,0,0,0,21,16Zm.92-13.38a1,1,0,0,0-.54-.54A1,1,0,0,0,21,2H17a1,1,0,0,0,0,2h1.59l-5.3,5.29a1,1,0,0,0,0,1.42,1,1,0,0,0,1.42,0L20,5.41V7a1,1,0,0,0,2,0V3A1,1,0,0,0,21.92,2.62Z"
@@ -138,6 +150,8 @@ export const TogglePaginationPDFIcon = (props: IIconProps) => {
       id="Scroll_1"
       viewBox="0 0 297 297"
       xmlSpace="preserve"
+      aria-hidden="true"
+      focusable="false"
     >
       <path
         fill={color || "#aaa"}
@@ -160,6 +174,8 @@ export const PrintPDFIcon: React.FC<IIconProps> = ({ color, size, reverse }) => 
       viewBox="0 0 512 512"
       fill={color || 'currentColor'}
       xmlns="http://www.w3.org/2000/svg"
+      aria-hidden="true"
+      focusable="false"
     >
       <path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zM432 248a24 24 0 1 1 0 48 24 24 0 1 1 0-48z" />
     </svg>

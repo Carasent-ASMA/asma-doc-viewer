@@ -18,13 +18,18 @@ const PDFPagination: FC = () => {
         <Container id='pdf-pagination'>
             <PageNavButtonLeft
                 id='pdf-pagination-prev'
+                aria-label={t('pdfPluginPreviousPageLabel')}
                 onClick={() => dispatch(setCurrentPage(currentPage - 1))}
                 disabled={currentPage === 1}
             >
                 <PrevPDFNavIcon color='#000' size='50%' />
             </PageNavButtonLeft>
 
-            <PageTag id='pdf-pagination-info'>
+            {/* The page counter is the only feedback that prev/next did anything: focus stays on the
+                button and the rendered page is an image. Polite status so the new position is
+                announced (WCAG 4.1.3). Only mounted in paginated mode, where the page changes on an
+                explicit press, so there is nothing here to announce on scroll. */}
+            <PageTag id='pdf-pagination-info' role='status' aria-live='polite' aria-atomic='true'>
                 {t('pdfPluginPageNumber', {
                     currentPage,
                     allPagesCount: numPages,
@@ -33,6 +38,7 @@ const PDFPagination: FC = () => {
 
             <PageNavButtonRight
                 id='pdf-pagination-next'
+                aria-label={t('pdfPluginNextPageLabel')}
                 onClick={() => dispatch(setCurrentPage(currentPage + 1))}
                 disabled={currentPage >= numPages}
             >

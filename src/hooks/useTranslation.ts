@@ -15,14 +15,18 @@ export const useTranslation = () => {
       key: keyof typeof defaultTranslations,
       variables?: Record<string, string | number>,
     ) => {
-      const translations = locales[language];
+      // A bundle other than `en` may be missing a key — that is the case this function already
+      // handled at runtime, now stated in the type instead of being hidden by a widened union.
+      const translations: Partial<typeof defaultTranslations> = locales[language];
 
-      if (translations[key]) {
-        return mustache.render(translations[key], variables);
+      const localized = translations[key];
+      if (localized) {
+        return mustache.render(localized, variables);
       }
 
-      if (defaultTranslations[key]) {
-        return mustache.render(defaultTranslations[key], variables);
+      const fallback = defaultTranslations[key];
+      if (fallback) {
+        return mustache.render(fallback, variables);
       }
 
       return key;

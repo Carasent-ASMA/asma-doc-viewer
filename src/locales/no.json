@@ -1,10 +1,19 @@
 {
     "documentNavInfo": "Dokument {{ currentFileNo }} av {{ allFilesCount }}",
+    "documentNavPreviousLabel": "Forrige dokument",
+    "documentNavNextLabel": "Neste dokument",
     "noRendererMessage": "Ingen rendering for filtype: {{{ fileType }}}",
     "downloadButtonLabel": "Last ned fil",
     "brokenFile": "Filen din er ødelagt. Vennligst sjekk den på maskinen din.",
     "msgPluginRecipients": "Mottakere",
     "msgPluginSender": "Avsender",
     "pdfPluginLoading": "Lasting...",
-    "pdfPluginPageNumber": "Side {{ currentPage }}/{{ allPagesCount }}"
+    "pdfPluginPageNumber": "Side {{ currentPage }}/{{ allPagesCount }}",
+    "pdfPluginPrintLabel": "Skriv ut dokument",
+    "pdfPluginZoomInLabel": "Zoom inn",
+    "pdfPluginZoomOutLabel": "Zoom ut",
+    "pdfPluginResetZoomLabel": "Tilbakestill zoom",
+    "pdfPluginTogglePaginationLabel": "Veksle sidevisning",
+    "pdfPluginPreviousPageLabel": "Forrige side",
+    "pdfPluginNextPageLabel": "Neste side"
 }

@@ -34,4 +34,9 @@ export const supportedLanguages = Object.keys(locales)
 
 export type AvailableLanguages = keyof typeof locales
 
-export const defaultLanguage: AvailableLanguages = 'en'
+/**
+ * Annotated with the literal `'en'`, not `AvailableLanguages`: `en` is the source of truth that
+ * every other bundle is a partial translation of, and widening it here collapses the key type in
+ * `useTranslation` to the keys *every* bundle happens to share.
+ */
+export const defaultLanguage = 'en' as const

@@ -24,6 +24,8 @@ const DocNavIcon = ({ color, size, reverse }: IIconProps) => {
       version="1.1"
       viewBox={`0 0 32 32`}
       xmlSpace="preserve"
+      aria-hidden="true"
+      focusable="false"
     >
       <path
         clipRule="evenodd"

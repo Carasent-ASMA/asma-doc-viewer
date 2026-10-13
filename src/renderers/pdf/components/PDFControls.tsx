@@ -50,27 +50,41 @@ const PDFControls: FC = () => {
                     <DownloadPDFIcon color='#000' size='75%' />
                 </DownloadButton>
             )}
-            <ControlButton id='pdf-print' onClick={handlePrint}>
+            <ControlButton id='pdf-print' aria-label={t('pdfPluginPrintLabel')} onClick={handlePrint}>
                 <PrintPDFIcon color='#000' size='65%' />
             </ControlButton>
-            <ControlButton id='pdf-zoom-out' onMouseDown={() => dispatch(setZoomLevel(zoomLevel - zoomJump))}>
+            <ControlButton
+                id='pdf-zoom-out'
+                aria-label={t('pdfPluginZoomOutLabel')}
+                onClick={() => dispatch(setZoomLevel(zoomLevel - zoomJump))}
+            >
                 <ZoomOutPDFIcon color='#000' size='80%' />
             </ControlButton>
 
-            <ControlButton id='pdf-zoom-in' onMouseDown={() => dispatch(setZoomLevel(zoomLevel + zoomJump))}>
+            <ControlButton
+                id='pdf-zoom-in'
+                aria-label={t('pdfPluginZoomInLabel')}
+                onClick={() => dispatch(setZoomLevel(zoomLevel + zoomJump))}
+            >
                 <ZoomInPDFIcon color='#000' size='80%' />
             </ControlButton>
 
             <ControlButton
                 id='pdf-zoom-reset'
-                onMouseDown={() => dispatch(setZoomLevel(defaultZoomLevel))}
+                aria-label={t('pdfPluginResetZoomLabel')}
+                onClick={() => dispatch(setZoomLevel(defaultZoomLevel))}
                 disabled={zoomLevel === defaultZoomLevel}
             >
                 <ResetZoomPDFIcon color='#000' size='70%' />
             </ControlButton>
 
             {numPages > 1 && (
-                <ControlButton id='pdf-toggle-pagination' onMouseDown={() => dispatch(setPDFPaginated(!paginated))}>
+                <ControlButton
+                    id='pdf-toggle-pagination'
+                    aria-label={t('pdfPluginTogglePaginationLabel')}
+                    aria-pressed={paginated}
+                    onClick={() => dispatch(setPDFPaginated(!paginated))}
+                >
                     <TogglePaginationPDFIcon color='#000' size='70%' reverse={paginated} />
                 </ControlButton>
             )}
