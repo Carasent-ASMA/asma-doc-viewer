@@ -1,10 +1,19 @@
 {
     "documentNavInfo": "Document {{ currentFileNo }} of {{ allFilesCount }}",
+    "documentNavPreviousLabel": "Previous document",
+    "documentNavNextLabel": "Next document",
     "noRendererMessage": "No renderer for file type: {{{ fileType }}}",
     "downloadButtonLabel": "Download file",
     "brokenFile": "Your file is broken. Please check it on your machine.",
     "msgPluginRecipients": "Recipients",
     "msgPluginSender": "Sender",
     "pdfPluginLoading": "Loading...",
-    "pdfPluginPageNumber": "Page {{ currentPage }}/{{ allPagesCount }}"
+    "pdfPluginPageNumber": "Page {{ currentPage }}/{{ allPagesCount }}",
+    "pdfPluginPrintLabel": "Print document",
+    "pdfPluginZoomInLabel": "Zoom in",
+    "pdfPluginZoomOutLabel": "Zoom out",
+    "pdfPluginResetZoomLabel": "Reset zoom",
+    "pdfPluginTogglePaginationLabel": "Toggle page-by-page view",
+    "pdfPluginPreviousPageLabel": "Previous page",
+    "pdfPluginNextPageLabel": "Next page"
 }

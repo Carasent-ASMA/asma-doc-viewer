@@ -33,12 +33,18 @@ export const DocumentNav: React.FC = () => {
                 })}
             </p>
 
-            <ButtonPrev id='doc-nav-prev' onClick={() => dispatch(previousDocument())} disabled={currentFileNo === 0}>
+            <ButtonPrev
+                id='doc-nav-prev'
+                aria-label={t('documentNavPreviousLabel')}
+                onClick={() => dispatch(previousDocument())}
+                disabled={currentFileNo === 0}
+            >
                 <PrevDocIcon color='#fff' size='60%' />
             </ButtonPrev>
 
             <ButtonNext
                 id='doc-nav-next'
+                aria-label={t('documentNavNextLabel')}
                 onClick={() => dispatch(nextDocument())}
                 disabled={currentFileNo >= documents.length - 1}
             >
